@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>🎧 Radio Shop — GitHub Edition</title>
+  <link rel="stylesheet" href="./assets/styles.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+  <script defer src="./assets/config.js"></script>
+  <script defer src="./assets/sheets.js"></script>
+  <script defer src="./assets/radio.js"></script>
+  <script defer src="./assets/app.js"></script>
+</head>
+<body>
+  <header class="hdr">
+    <button id="openCart" class="btn ghost">🛒</button>
+    <h1 class="ttl">🎧 Radio Shop</h1>
+    <div id="clock" class="muted">--:--</div>
+  </header>
+
+  <section class="panel">
+    <div class="row g10 aic">
+      <button id="playBtn" class="btn">🎵 تشغيل</button>
+      <button id="nextBtn" class="btn ghost">⏭️ التالي</button>
+      <input id="vol" class="vol" type="range" min="0" max="100" value="70"/>
+    </div>
+    <div id="nowTitle" class="title mt6">—</div>
+    <div id="nowMeta" class="muted">—</div>
+  </section>
+
+  <section class="panel">
+    <div class="row sb aic">
+      <div class="title">الفئات</div>
+      <select id="categorySelect" class="sel"></select>
+    </div>
+    <div id="products" class="grid"></div>
+  </section>
+
+  <section class="panel">
+    <div class="title">قائمة الأغاني</div>
+    <div id="playlistBox" class="grid"></div>
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <!-- نافذة الصورة المكبرة -->
+  <div id="imgModal" class="modal" hidden>
+    <button id="closeImg" class="btn x">×</button>
+    <img id="bigImg" alt=""/>
+  </div>
+
+  <!-- سلة مبسطة -->
+  <div id="cart" class="drawer" hidden>
+    <div class="drawer-hdr">
+      <div class="title">سلة التسوق</div>
+      <button id="closeCart" class="btn x">×</button>
+    </div>
+    <div id="cartItems" class="drawer-body muted">لا توجد عناصر</div>
+  </div>
+</body>
+</html>
